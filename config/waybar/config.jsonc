@@ -1,0 +1,132 @@
+{
+    "reload_style_on_change": true,
+
+    "layer": "top",
+    "position": "top",
+    "height": 38,
+    "spacing": 4,
+
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "network",
+        "wireplumber",
+        "backlight",
+        "battery",
+        "custom/notification",
+        "tray",
+        "custom/power"
+    ],
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "active": "",
+            "default": ""
+        },
+        "on-click": "activate"
+    },
+
+    "clock": {
+        "format": "  {:%H:%M}",
+        "format-alt": "  {:%A, %d %B %Y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "network": {
+        "format-wifi": "  {essid}  {signalStrength}%",
+        "format-ethernet": "󰈀  Ethernet",
+        "format-disconnected": "󰖪  Disconnected",
+        "tooltip-format-wifi": "{essid}\n{ipaddr}",
+
+        "on-click": "networkmanager_dmenu"
+    },
+
+    "wireplumber": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "󰝟  Muted",
+
+        "format-icons": [
+            "",
+            "",
+            ""
+        ],
+
+        "on-click": "pavucontrol"
+    },
+
+    "backlight": {
+        "format": "☀  {percent}%",
+
+        "on-scroll-up": "brightnessctl set +5%",
+        "on-scroll-down": "brightnessctl set 5%-"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+
+        "format": "{icon}  {capacity}%",
+        "format-charging": "󰂄  {capacity}%",
+        "format-plugged": "  {capacity}%",
+
+        "format-icons": [
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ]
+    },
+
+    "custom/notification": {
+        "tooltip": true,
+        "format": "{icon}",
+
+        "format-icons": {
+            "notification": "󱅫",
+            "none": "󰂜",
+            "dnd-notification": "󰂠",
+            "dnd-none": "󰪓"
+        },
+
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+
+        "escape": true
+    },
+
+    "tray": {
+        "spacing": 8
+    },
+
+    "custom/power": {
+        "format": "",
+        "tooltip": true,
+        "tooltip-format": "Power menu",
+
+        "on-click": "wlogout"
+    }
+}

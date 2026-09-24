@@ -1,0 +1,60 @@
+--------------------------------------------------
+-- BASIC EDITOR
+--------------------------------------------------
+vim.cmd.colorscheme("habamax")
+vim.g.mapleader = " "
+
+vim.opt.number = true
+vim.opt.relativenumber = false
+
+vim.opt.cursorline = true
+vim.opt.termguicolors = true
+
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.smartindent = true
+
+vim.opt.wrap = false
+
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+
+vim.opt.scrolloff = 8
+vim.opt.sidescrolloff = 8
+
+vim.opt.signcolumn = "yes"
+
+vim.opt.undofile = true
+
+vim.opt.updatetime = 250
+vim.opt.timeoutlen = 400
+
+--------------------------------------------------
+-- CLIPBOARD
+--------------------------------------------------
+
+vim.opt.clipboard = "unnamedplus"
+
+--------------------------------------------------
+-- APPEARANCE
+--------------------------------------------------
+
+vim.opt.fillchars = {
+    vert = "│",
+    fold = " ",
+    eob = " ",
+}
+
+--------------------------------------------------
+-- SMALL, USEFUL KEYBINDS
+--------------------------------------------------
+
+-- Clear search highlighting
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
+-- Easier terminal escape
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")

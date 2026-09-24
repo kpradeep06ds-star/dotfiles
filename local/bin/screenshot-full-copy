@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+grim - | wl-copy
+
+notify-send "Screenshot" "Full screen copied to clipboard"

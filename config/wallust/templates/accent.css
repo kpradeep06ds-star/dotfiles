@@ -1,0 +1,5 @@
+@define-color accent {{color4}};
+@define-color accent_alt {{color6}};
+@define-color success {{color2}};
+@define-color warning {{color3}};
+@define-color danger {{color1}};

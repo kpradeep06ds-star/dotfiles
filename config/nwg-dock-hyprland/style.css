@@ -1,0 +1,55 @@
+@import "wallust-accent.css";
+window {
+    background: rgba(17, 17, 27, 0.88);
+
+    border: 1px solid alpha(@accent, 0.20);
+    border-radius: 16px;
+
+    padding: 5px;
+}
+
+
+/* App buttons */
+button {
+    background: transparent;
+
+    border: none;
+    border-radius: 10px;
+
+    margin: 2px;
+    padding: 4px;
+
+    box-shadow: none;
+    outline: none;
+}
+
+/* Hover effect */
+button:hover {
+    background: alpha(@accent, 0.18);
+}
+
+/* Pressed/clicked state */
+button:active {
+    background: alpha(@accent, 0.28);
+}
+
+/* Icons */
+image {
+    margin: 1px;
+}
+
+/* Tooltip */
+tooltip {
+    background: rgba(17, 17, 27, 0.96);
+
+    color: #cdd6f4;
+
+    border: 1px solid rgba(137, 180, 250, 0.20);
+    border-radius: 8px;
+}
+
+tooltip label {
+    color: #cdd6f4;
+    font-family: "Noto Sans";
+    font-size: 12px;
+}

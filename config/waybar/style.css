@@ -1,0 +1,102 @@
+@import "wallust-colors.css";
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    font-weight: 600;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(17, 17, 27, 0.88);
+    color: #cdd6f4;
+
+    border-radius: 12px;
+    border: 1px solid alpha(@accent, 0.20);
+
+    margin: 5px 8px 0 8px;
+}
+
+/* Workspaces */
+
+#workspaces {
+    margin-left: 6px;
+}
+
+#workspaces button {
+    color: #7f849c;
+    background: transparent;
+
+    padding: 0 7px;
+    margin: 5px 2px;
+
+    border-radius: 8px;
+}
+
+#workspaces button.active {
+    color: #11111b;
+    background: @accent;
+}
+
+#workspaces button:hover {
+    color: #cdd6f4;
+    background: alpha(@accent, 0.18);
+}
+
+/* Main modules */
+
+#clock,
+#network,
+#wireplumber,
+#backlight,
+#battery,
+#custom-notification,
+#tray,
+#custom-power {
+    color: #cdd6f4;
+
+    padding: 0 9px;
+    margin: 5px 2px;
+
+    border-radius: 8px;
+
+    background: rgba(49, 50, 68, 0.58);
+}
+
+/* Accents */
+
+#network {
+    color: @accent_alt;
+}
+
+#wireplumber {
+    color: @accent;
+}
+
+#backlight {
+    color: #f9e2af;
+}
+
+#battery {
+    color: #a6e3a1;
+}
+
+#battery.warning {
+    color: @warning;
+}
+
+#battery.critical {
+    color: @danger;
+}
+
+#custom-notification {
+    color: #cba6f7;
+}
+
+#custom-power {
+    color: #f38ba8;
+    margin-right: 7px;
+}
+
+#custom-power:hover {
+    background: rgba(243, 139, 168, 0.20);
+}

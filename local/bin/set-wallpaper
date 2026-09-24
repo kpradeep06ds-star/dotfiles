@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+wallpaper="${1:-}"
+
+if [[ -z "$wallpaper" ]]; then
+    echo "Usage: set-wallpaper /path/to/image"
+    exit 1
+fi
+
+wallpaper="$(realpath "$wallpaper")"
+
+# Change wallpaper
+hyprctl hyprpaper wallpaper ", $wallpaper, cover"
+
+# Regenerate Wallust templates
+wallust run "$wallpaper"

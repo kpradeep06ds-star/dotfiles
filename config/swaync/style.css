@@ -1,0 +1,114 @@
+@import "wallust-accent.css";
+* {
+    font-family: "Noto Sans";
+    font-size: 13px;
+}
+
+/* Notification center panel */
+.control-center {
+    background: rgba(17, 17, 27, 0.94);
+    border: 1px solid alpha(@accent, 0.22);
+    border-radius: 16px;
+    padding: 8px;
+}
+
+/* Individual notifications */
+.notification-row {
+    outline: none;
+    margin: 4px;
+}
+
+.notification-background {
+    background: transparent;
+}
+
+.notification {
+    background: rgba(49, 50, 68, 0.88);
+
+    border: 1px solid rgba(137, 180, 250, 0.14);
+    border-radius: 12px;
+
+    padding: 4px;
+}
+
+/* Notification text */
+.summary {
+    color: #cdd6f4;
+    font-weight: 700;
+}
+
+.body {
+    color: #bac2de;
+}
+
+.time {
+    color: #7f849c;
+}
+
+/* Close button */
+.close-button {
+    background: rgba(243, 139, 168, 0.15);
+    color: #f38ba8;
+
+    border-radius: 10px;
+    border: none;
+}
+
+.close-button:hover {
+    background: rgba(243, 139, 168, 0.30);
+}
+
+/* Title at top */
+.widget-title {
+    color: #cdd6f4;
+    margin: 8px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.widget-title > button {
+    background: rgba(49, 50, 68, 0.75);
+    color: #cdd6f4;
+
+    border: none;
+    border-radius: 9px;
+    padding: 6px 10px;
+}
+
+.widget-title > button:hover {
+    background: rgba(137, 180, 250, 0.20);
+}
+
+/* Do Not Disturb */
+.widget-dnd {
+    color: #cdd6f4;
+    margin: 8px;
+}
+
+.widget-dnd > switch {
+    background: rgba(49, 50, 68, 0.9);
+    border-radius: 12px;
+}
+
+.widget-dnd > switch:checked {
+    background: @accent;
+}
+
+/* Quick-action buttons, if present */
+.widget-buttons-grid {
+    padding: 6px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+    background: rgba(49, 50, 68, 0.75);
+    color: #cdd6f4;
+
+    border-radius: 10px;
+    border: none;
+
+    margin: 3px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+    background: rgba(137, 180, 250, 0.20);
+}
