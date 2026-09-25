@@ -28,6 +28,13 @@
 
   # Set your time zone.
   time.timeZone = "Asia/Kolkata";
+   
+  hardware.bluetooth = {
+   enable = true;
+   powerOnBoot = true;
+  };
+
+  services.blueman.enable = true;
 
   # Select internationalisation properties.
   # Locale
@@ -101,6 +108,7 @@
    environment.systemPackages = with pkgs; [
      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
      tmux
+     glib
      kdePackages.dolphin
      kdePackages.okular
      go
@@ -175,15 +183,27 @@
      # Pandoc ecosystem
      pandoc
      #haskellPackages.pandoc-crossref
-     tectonic                    
+     tectonic
+     gtk3
+     gsettings-desktop-schemas
+     numix-icon-theme
+     numix-icon-theme-circle
+     yazi
      # Lightweight modern PDF engine
      # Optional: CSS/HTML-based PDF generator
      # texlive.combined.scheme-medium # Alternative: if offline LaTeX is strictly required
    ];
-  
+ 
+  programs.dconf.enable = true;
+
   environment.etc."xdg/menus/applications.menu".source =
   "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
 
+  environment.sessionVariables = {
+  XDG_DATA_DIRS = [
+    "${pkgs.gsettings-desktop-schemas}/share/gsettings-schemas/${pkgs.gsettings-desktop-schemas.name}"
+   ];
+  };
 
   programs.neovim = {
   enable = true;
