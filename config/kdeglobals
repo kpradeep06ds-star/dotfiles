@@ -1,0 +1,75 @@
+[ColorEffects:Disabled]
+ChangeSelectionColor=
+Color=
+ColorAmount=
+ColorEffect=
+ContrastAmount=
+ContrastEffect=
+Enable=
+IntensityAmount=
+IntensityEffect=
+
+[ColorEffects:Inactive]
+ChangeSelectionColor=
+Color=
+ColorAmount=
+ColorEffect=
+ContrastAmount=
+ContrastEffect=
+Enable=
+IntensityAmount=
+IntensityEffect=
+
+[Colors:Button]
+ForegroundNormal=238,238,238
+
+[Colors:Selection]
+BackgroundNormal=249,226,175
+ForegroundNormal=255,255,255
+
+[Colors:View]
+BackgroundAlternate=20,27,24
+BackgroundNormal=20,27,24
+ForegroundInactive=150,155,152
+ForegroundNormal=238,238,238
+
+[Colors:Window]
+BackgroundNormal=24,30,27
+ForegroundInactive=150,155,152
+ForegroundNormal=238,238,238
+
+[General]
+ColorScheme=JoyfulDark
+ColorSchemeHash=9f63c7711a13123582e720791ea0f8c0172977d2
+
+[Icons]
+Theme=Numix-Circle
+
+[KDE]
+contrast=7
+frameContrast=0.2
+
+[KFileDialog Settings]
+Allow Expansion=false
+Automatically select filename extension=true
+Breadcrumb Navigation=true
+Decoration position=2
+Show Full Path=false
+Show Inline Previews=true
+Show Preview=false
+Show Speedbar=true
+Show hidden files=false
+Sort by=Name
+Sort directories first=true
+Sort hidden files last=false
+Sort reversed=false
+Speedbar Width=140
+View Style=DetailTree
+
+[WM]
+activeBackground=24,30,27
+activeBlend=24,30,27
+activeForeground=238,238,238
+inactiveBackground=24,30,27
+inactiveBlend=24,30,27
+inactiveForeground=238,238,238
