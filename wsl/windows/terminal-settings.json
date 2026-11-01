@@ -1,0 +1,62 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": [],
+    "defaultProfile": "{05646f06-4164-411a-a69e-846e52c5b961}",
+    "keybindings": [],
+    "newTabMenu": [ { "type": "remainingProfiles" } ],
+    "profiles": {
+        "defaults": {
+            "colorScheme": "Catppuccin Mocha",
+            "font": { "face": "JetBrainsMono Nerd Font", "size": 12, "weight": "medium", "cellHeight": "1.2" },
+            "antialiasingMode": "cleartype",
+            "padding": "12",
+            "opacity": 100,
+            "useAcrylic": false,
+            "cursorShape": "filledBox"
+        },
+        "list": [
+            {
+                "guid": "{05646f06-4164-411a-a69e-846e52c5b961}",
+                "name": "Ubuntu (warlock)",
+                "commandline": "wsl.exe -d Ubuntu",
+                "icon": "🐧",
+                "hidden": false,
+                "startingDirectory": "~"
+            },
+            { "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}", "hidden": false, "name": "Windows PowerShell" },
+            { "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}", "hidden": false, "name": "Command Prompt" }
+        ]
+    },
+    "schemes": [
+        {
+            "name": "Catppuccin Mocha",
+            "background": "#1E1E2E", "foreground": "#CDD6F4",
+            "cursorColor": "#F5E0DC", "selectionBackground": "#585B70",
+            "black": "#45475A", "red": "#F38BA8", "green": "#A6E3A1", "yellow": "#F9E2AF",
+            "blue": "#89B4FA", "purple": "#F5C2E7", "cyan": "#94E2D5", "white": "#BAC2DE",
+            "brightBlack": "#585B70", "brightRed": "#F38BA8", "brightGreen": "#A6E3A1",
+            "brightYellow": "#F9E2AF", "brightBlue": "#89B4FA", "brightPurple": "#F5C2E7",
+            "brightCyan": "#94E2D5", "brightWhite": "#A6ADC8"
+        },
+        {
+            "name": "Catppuccin Frappe",
+            "background": "#303446", "foreground": "#C6D0F5",
+            "cursorColor": "#F2D5CF", "selectionBackground": "#626880",
+            "black": "#51576D", "red": "#E78284", "green": "#A6D189", "yellow": "#E5C890",
+            "blue": "#8CAAEE", "purple": "#F4B8E4", "cyan": "#81C8BE", "white": "#B5BFE2",
+            "brightBlack": "#626880", "brightRed": "#E78284", "brightGreen": "#A6D189",
+            "brightYellow": "#E5C890", "brightBlue": "#8CAAEE", "brightPurple": "#F4B8E4",
+            "brightCyan": "#81C8BE", "brightWhite": "#A5ADCE"
+        }
+    ],
+    "theme": "Catppuccin Mocha",
+    "themes": [
+        {
+            "name": "Catppuccin Mocha",
+            "window": { "applicationTheme": "dark", "useMica": false },
+            "tabRow": { "background": "#181825FF", "unfocusedBackground": "#11111BFF" },
+            "tab": { "background": "#1E1E2EFF", "unfocusedBackground": "#181825FF", "showCloseButton": "hover" }
+        }
+    ]
+}

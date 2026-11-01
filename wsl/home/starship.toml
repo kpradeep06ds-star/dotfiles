@@ -1,0 +1,37 @@
+# Mirrors programs.starship.settings from etc-nixos/configuration.nix
+add_newline = true
+format = "$directory$git_branch$git_status$python$rust$nix_shell$cmd_duration$line_break$character"
+
+[directory]
+style = "bold #89b4fa"
+truncation_length = 4
+truncate_to_repo = false
+
+[git_branch]
+symbol = " "
+style = "bold #cba6f7"
+
+[git_status]
+style = "bold #f9e2af"
+
+[python]
+symbol = " "
+style = "bold #89b4fa"
+
+[rust]
+symbol = " "
+style = "bold #fab387"
+
+[nix_shell]
+symbol = " "
+style = "bold #89dceb"
+
+[cmd_duration]
+min_time = 2000
+format = "took [$duration]($style) "
+style = "bold #a6adc8"
+
+[character]
+success_symbol = "[❯](bold #a6e3a1)"
+error_symbol = "[❯](bold #f38ba8)"
+vimcmd_symbol = "[❮](bold #89b4fa)"

@@ -1,0 +1,16 @@
+# Sourced from ~/.bashrc on WSL (hooked by wsl/scripts/50-link-configs.sh).
+# Aliases mirror programs.bash.shellAliases in etc-nixos/configuration.nix.
+
+export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
+export EDITOR=nvim VISUAL=nvim
+
+alias vi=nvim vim=nvim
+alias ll='eza -lah --icons=auto --group-directories-first'
+alias tree='eza --tree --icons=auto'
+alias catp='bat --paging=never'
+
+# fzf: Ctrl+R history, Ctrl+T file picker
+[ -f /usr/share/doc/fzf/examples/key-bindings.bash ] && . /usr/share/doc/fzf/examples/key-bindings.bash
+
+command -v zoxide   >/dev/null && eval "$(zoxide init bash)"     # z <dir>
+command -v starship >/dev/null && eval "$(starship init bash)"

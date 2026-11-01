@@ -1,0 +1,14 @@
+# %USERPROFILE%\.wslconfig - applies to ALL WSL distros.
+# Apply with (PowerShell): wsl --shutdown
+# Comments must be on their own lines; inline comments break values.
+
+[wsl2]
+# Cap WSL's RAM (machine has 32 GB); raise for big Spark/Ray jobs
+memory=16GB
+swap=8GB
+
+[experimental]
+# Hand freed memory back to Windows over time
+autoMemoryReclaim=gradual
+# Let the virtual disk shrink when files are deleted
+sparseVhd=true
