@@ -2,6 +2,7 @@
 -- BASIC EDITOR
 --------------------------------------------------
 vim.cmd.colorscheme("habamax")
+vim.api.nvim_set_hl(0, "LspInlayHint", { link = "Comment" })
 vim.g.mapleader = " "
 
 vim.opt.number = true
@@ -188,6 +189,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
                     autotrigger = true,
                 }
             )
+        end
+
+        -- NEW: grey type hints (like VS Code)
+        if client:supports_method("textDocument/inlayHint") then
+            vim.lsp.inlay_hint.enable(true, { bufnr = event.buf })
         end
     end,
 })
@@ -435,6 +441,11 @@ vim.keymap.set(
         desc = "Format code",
     }
 )
+
+
+vim.keymap.set("n", "<leader>ci", function()
+    vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = 0 }), { bufnr = 0 })
+end, { desc = "Toggle inlay hints" })
 
 
 --------------------------------------------------
